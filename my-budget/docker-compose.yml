@@ -1,0 +1,10 @@
+# docker-compose.yml
+version: '5'
+
+services:
+  dash-my-budget:
+    build: .
+    ports:
+      - "8050:8050"
+    volumes:
+      - .:/app

@@ -1,10 +1,7 @@
 from dash import html, dcc
-
-import dash
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import pandas as pd
-import plotly.express as px
 
 # import from folders
 from app import *
@@ -23,7 +20,6 @@ list_receitas_aux = list_receitas.to_dict()
 
 list_despesas = pd.read_csv("df_cat_despesa.csv", index_col=0)
 list_despesas_aux = list_despesas.to_dict()
-
 
 # =========  Layout  =========== #
 content = html.Div(id="page-content")
