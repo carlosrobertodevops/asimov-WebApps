@@ -1,4 +1,5 @@
-import dash
+# Import packages
+from dash import Dash
 import dash_bootstrap_components as dbc
 
 estilos = [
@@ -9,9 +10,8 @@ estilos = [
 dbc_css = (
     "https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates@V1.0.4/dbc.min.css"
 )
-# FONT_AWESOME = "https://use.fontawesome.com/releases/v5.10.2/css/all.css"
 
-app = dash.Dash(__name__, external_stylesheets=estilos + [dbc_css])
+app = Dash(__name__, external_stylesheets=estilos + [dbc_css])
 
 app.config["suppress_callback_exceptions"] = True
 app.scripts.config.serve_locally = True
