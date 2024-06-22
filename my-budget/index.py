@@ -2,13 +2,11 @@ from dash import html, dcc
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import pandas as pd
-from components import sidebar, dashboards, extratos
 
-# import from folders
+# import from foldersp
 from app import *
 
-
-# DataFrames and Dcc.Store
+from components import sidebar, extratos, dashboards
 
 df_receitas = pd.read_csv("df_receitas.csv", index_col=0, parse_dates=True)
 df_receitas_aux = df_receitas.to_dict()
@@ -44,7 +42,7 @@ app.layout = dbc.Container(
 )
 
 
-@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
+@callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/" or pathname == "/dashboards":
         return dashboards.layout
