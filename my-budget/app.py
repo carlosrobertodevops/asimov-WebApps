@@ -11,7 +11,8 @@ dbc_css = (
     "https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates@V1.0.4/dbc.min.css"
 )
 
-app = Dash(__name__, external_stylesheets=estilos + [dbc_css])
+external_stylesheets = estilos + [dbc_css]
+app = Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.config["suppress_callback_exceptions"] = True
 app.scripts.config.serve_locally = True

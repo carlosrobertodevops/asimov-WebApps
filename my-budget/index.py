@@ -2,10 +2,11 @@ from dash import html, dcc
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import pandas as pd
+from components import sidebar, dashboards, extratos
 
 # import from folders
 from app import *
-from components import sidebar, dashboards, extratos
+
 
 # DataFrames and Dcc.Store
 
