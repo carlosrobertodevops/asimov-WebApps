@@ -3,10 +3,11 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import pandas as pd
 
-# import from foldersp
+# import from folders
 from app import *
+from componentes import sidebar, dashboards, extratos
 
-from components import sidebar, extratos, dashboards
+# DataFrames and Dcc.Store
 
 df_receitas = pd.read_csv("df_receitas.csv", index_col=0, parse_dates=True)
 df_receitas_aux = df_receitas.to_dict()
@@ -19,6 +20,7 @@ list_receitas_aux = list_receitas.to_dict()
 
 list_despesas = pd.read_csv("df_cat_despesa.csv", index_col=0)
 list_despesas_aux = list_despesas.to_dict()
+
 
 # =========  Layout  =========== #
 content = html.Div(id="page-content")
@@ -42,7 +44,7 @@ app.layout = dbc.Container(
 )
 
 
-@callback(Output("page-content", "children"), [Input("url", "pathname")])
+@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/" or pathname == "/dashboards":
         return dashboards.layout
