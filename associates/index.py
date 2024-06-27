@@ -6,7 +6,7 @@ import sqlite3
 
 # import from folders
 from app import *
-from components import home, sidebar
+from componentes import home, sidebar
 from sql_beta import df_proc, df_adv
 
 # Criar estrutura para Store intermediária ==============
