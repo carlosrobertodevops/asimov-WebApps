@@ -9,7 +9,7 @@ from dash import dash_table
 from dash.dash_table.Format import Group
 
 from app import app
-from components import home
+from componentes import home
 
 # ======== Layout ========= #
 layout = dbc.Modal([

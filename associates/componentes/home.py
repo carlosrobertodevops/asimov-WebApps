@@ -11,7 +11,7 @@ from dash import dash_table
 from dash.dash_table.Format import Group
 
 from app import app
-from components import modal_novo_processo, modal_novo_advogado, modal_advogados
+from componentes import modal_novo_processo, modal_novo_advogado, modal_advogados
 from sql_beta import df_adv, df_proc
 
 
